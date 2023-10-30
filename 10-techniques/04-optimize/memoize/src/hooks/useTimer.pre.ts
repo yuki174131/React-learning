@@ -1,10 +1,12 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useMemo } from 'react';
 import type { SyntheticEvent } from 'react';
 import { getPrimes } from 'utils/prime';
 
 const useTimer = (maxCount: number): [number, boolean, () => void] => {
   const [timeLeft, setTimeLeft] = useState(maxCount);
-  const primes = getPrimes(maxCount);
+  // const primes = getPrimes(maxCount);
+  // primesをメモ化
+  const primes = useMemo(() => getPrimes(maxCount), [maxCount]);
   const tick = () => setTimeLeft((t) => t - 1);
   const reset = (event?: SyntheticEvent) => {
     event?.stopPropagation();

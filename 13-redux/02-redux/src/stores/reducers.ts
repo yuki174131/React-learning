@@ -7,6 +7,7 @@ export interface CounterState {
 }
 export const initialState: CounterState = { count: 0 };
 
+// reducer 本体を定義してる。reducer とは (prevState, action) => newState で表現され る純粋関数
 export const counterReducer: Reducer<CounterState, CounterAction> = (
   state = initialState,
   action

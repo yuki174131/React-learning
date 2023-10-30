@@ -7,6 +7,8 @@ type Props = { maxCount?: number };
 const MAX_COUNT = 60;
 
 const Timer: FC<Props> = ({ maxCount = MAX_COUNT }) => {
+  // Custom Hook を作る際には、Custom Hook 関数の名前の頭に『use』をつける
+  // その関数が Custom Hook なのか をひと目で判断できるよう React の公式チームが課してる規約
   const [timeLeft, reset] = useTimer(maxCount);
 
   return (

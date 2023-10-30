@@ -4,6 +4,9 @@ import Form from './components/Form';
 import TextInput from './components/TextInput';
 import './App.css';
 
+// 他ファイルで定義してる Greet コンポーネントをインポートして JSX の中で使ってる。
+// タグ内で属性として定義されてる name と times が Greet コンポーネントに props として受け渡されてる
+// props とは『properties』から来てて、コンポーネントを関数として考えたときにその引数に相当するもの
 const App: React.FC = () => (
   <div className="App">
     <Greet name="Patty" times={4} />

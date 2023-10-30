@@ -6,6 +6,8 @@ import Users from './Users';
 const ProfileWriter: FC<{ count?: number }> = ({ count = 1 }) => {
   const [username, setUsername] = useState('');
   const [enableDeferred, seteEableDeferred] = useState(false);
+  // 引数を受けた戻り値をコンポーネントに適用すると、より緊急性の高いレンダリングがあるときに遅延されるようになる
+  // 気をつけないといけないのは、この遅延する値を適用するコン ポーネントをメモ化して、依存配列にその値を入れる必要がある
   const deferedUsename = useDeferredValue(username);
 
   const changeUsername = (event: SyntheticEvent) => {

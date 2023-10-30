@@ -11,6 +11,7 @@ export interface CounterAction {
   amount?: number;
 }
 
+// 3 つの関数 decrement、increment、add は action を生成する Action Creator と呼ばれる関数
 export const decrement = (): CounterAction => ({
   type: CounterActions.DECREMENT,
 });

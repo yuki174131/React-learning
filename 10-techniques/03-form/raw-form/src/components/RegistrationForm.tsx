@@ -23,6 +23,7 @@ interface FormData {
   isAgreed: boolean;
 }
 
+// フォーム全体の値を FormData 型のオブジェクトにして state として持ち回る
 const RegistrationForm: FC = () => {
   const [formData, setFormData] = useState<FormData>({
     username: '',
@@ -30,10 +31,12 @@ const RegistrationForm: FC = () => {
   });
 
   const handleSubmit = (event: SyntheticEvent) => {
+    // イベント本来の振る舞いを阻止。action 属性で指定されているURL、それがなければ現在のURLにフォームの値がPOSTで送られてページが遷移する。
     event.preventDefault();
     console.log(formData);
   };
 
+  // 受け取ったイベントのターゲットの種類によって抽出する値を振り分け、それを setFormData に渡して state を更新してる
   const handleChange = (
     event: ChangeEvent<HTMLInputElement | HTMLSelectElement>
   ) => {

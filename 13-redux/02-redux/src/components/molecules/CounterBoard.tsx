@@ -8,6 +8,7 @@ import {
   StatNumber,
 } from '@chakra-ui/react';
 
+// Redux とつなぎ込むための 器 として count、decrement、increment、add が用意されてる
 type Props = {
   bulk?: number;
   count?: number;

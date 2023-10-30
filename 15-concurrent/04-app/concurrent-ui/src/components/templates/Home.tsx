@@ -23,6 +23,7 @@ const Home: FC<Props> = ({ pageTitle }) => {
         <Heading as="h1">{pageTitle}</Heading>
       </Box>
       <Center m="4rem 0 1rem">
+        {/* 会社コードを state 値 orgCode として <OrgSearchForm> で入力させ、 それを <OrgInfo> と <MemberList> に渡してる。 */}
         <OrgSearchForm
           {...{ suggestList, setOrgCode, startTransition, isPending }}
         />
