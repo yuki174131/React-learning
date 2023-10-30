@@ -2,7 +2,7 @@ type DateFormat = `${number}-${number}-${number}`;
 
 const date1: DateFormat = "2022-09-01";
 console.log(date1);
-// const date2: DateFormat = 'Sep. 1, 2022';
+// const date2: DateFormat = 'Sep. 1, 2022'; //コンパイルエラー
 
 interface MonthMap {
   [key: `month_${number}`]: string;
@@ -14,5 +14,5 @@ const monthMap: MonthMap = {
 };
 
 monthMap.month_03 = 'March';
-// monthMap.four = 'April';
+// monthMap.four = 'April'; // コンパイルエラー
 console.log(monthMap);

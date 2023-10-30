@@ -10,6 +10,7 @@
     date: Date;
   }
 
+  // extends によるインターフェースの拡張と同等のことが、型エイリアスでもインターセクション 型を使えばできる
   type TPayment = Currency & {
     date: Date;
   };

@@ -1,5 +1,6 @@
 // インターフェースで定義
 {
+  // 呼び出し可能オブジェクトを定義
   interface NumOp {
     (n: number, m: number): number;
   }

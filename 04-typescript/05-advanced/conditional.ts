@@ -5,6 +5,6 @@ interface Book { isbn: string }
 
 type IdOf<T> = T extends User ? T['id'] : never;
 
-type NewUserId = IdOf<NewUser>;
-type OldUserId = IdOf<OldUser>;
-type BookId = IdOf<Book>;
+type NewUserId=IdOf<NewUser>; //string 
+type OldUserId=IdOf<OldUser>; //number
+type BookId = IdOf<Book>; // never

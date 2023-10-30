@@ -1,4 +1,4 @@
-// function declaration statement
+// 関数宣言
 {
   function add(n: number, m: number): number {
     return n + m;
@@ -6,7 +6,7 @@
   console.log(add(2, 4));
 }
 
-// function keyword expression
+// 関数式
 {
   const add = function (n: number, m: number): number {
     return n + m;
@@ -14,7 +14,7 @@
   console.log(add(5, 7));
 }
 
-// arrow function expression
+// アロー関数式
 {
   const add = (n: number, m: number): number => n + m;
   const hello = (): void => {

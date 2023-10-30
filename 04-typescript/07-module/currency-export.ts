@@ -19,4 +19,6 @@ const Currency = {
   },
 };
 
+// Currencyはリテラル型とオブジェクトともエクスポートされる。
+// Currency をインポートすると、型と変数の別々のコンテキストで使える
 export { Currency };

@@ -37,3 +37,5 @@ transform();
 transform(new Brooch());
 transform(new CosmicCompact());
 transform(new CrisisCompact());
+
+// 関数宣言の重複は JavaScript では単に再定義となって前のものが上書きされるだけだけど、 TypeScript では同じ名前の関数でも型が異なる宣言を重複させることでオーバーロードができる

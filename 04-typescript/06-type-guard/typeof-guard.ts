@@ -4,4 +4,4 @@ if (typeof foo === 'string') {
   console.log(foo.split(','));
 }
 
-// console.log(foo.split(','));
+// console.log(foo.split(','));　//コンパイルエラー
