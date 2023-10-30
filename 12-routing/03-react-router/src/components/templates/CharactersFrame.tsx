@@ -10,6 +10,8 @@ const CharactersFrame: FC = () => (
         『SLAM DUNK』登場人物
       </Heading>
     </header>
+    {/* 子ルート要素のコンポーネントをレンダリングするために用意しておくプレースホルダー */}
+    {/* /characters なら AllPlayers コンポーネントが、/characters/:schoolID なら PlayerListBySchool コンポーネントがここにレンダリングされることになる */}
     <Outlet />
     <HomeButton my={16} />
   </Box>

@@ -7,6 +7,7 @@ import CharactersFrame from 'components/templates/CharactersFrame';
 import Home from 'components/templates/Home';
 
 const IndexRoutes: FC = () => {
+  // useEffect を使って、コンポーネントのレンダリング時に強制的にトップにスクロールさせて る
   const { hash, pathname } = useLocation();
 
   useEffect(() => {
@@ -18,7 +19,9 @@ const IndexRoutes: FC = () => {
   return (
     <Routes>
       <Route path="characters" element={<CharactersFrame />}>
+        {/* 全キャラ一覧 */}
         <Route path="" element={<AllPlayers my={12} />} />
+        {/* 高校別キャラ一覧 */}
         <Route path=":schoolID" element={<PlayerListBySchool my={12} />} />
       </Route>
       <Route path="/" element={<Home />} />
