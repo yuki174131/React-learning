@@ -7,3 +7,4 @@ const user = {
 const { id, ...userWithoutId } = user;
 
 console.log(id, userWithoutId);
+// 1 { name: 'Patty Rabbit', email: 'patty@maple.town', age: 8 }

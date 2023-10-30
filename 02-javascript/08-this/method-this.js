@@ -5,4 +5,4 @@ const foo = {
   },
 };
 
-foo.dump();
+foo.dump(); //{name:'FooObject',dump:[Function:dump]}

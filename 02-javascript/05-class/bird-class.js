@@ -1,4 +1,6 @@
 class Bird {
+  // プライベートなプロパティ。this.#className という記述でアクセスできる
+  // プライベートフィールド
   #className = '鳥類';
 
   constructor(name) {
@@ -18,6 +20,7 @@ class Bird {
   };
 }
 
+// クラスを継承する場合は extends キーワード
 class FlyableBird extends Bird {
   constructor(name) {
     super(name);
@@ -28,11 +31,11 @@ class FlyableBird extends Bird {
   };
 }
 
-Bird.explain();
+Bird.explain(); // これは鳥のクラスです
 
-const penguin = new Bird("ペンギン");
-penguin.introduce();
+const penguin = new Bird('ペンギン'); 
+penguin.introduce(); // 私は鳥類のペンギンです
 
-const hawk = new FlyableBird("タカ");
-hawk.cry("ピィィー");
-hawk.fly();
+const hawk = new FlyableBird('タカ'); 
+hawk.cry('ピィィー'); //タカが「ピィィー」と鳴きました
+hawk.fly(); // タカが飛びました

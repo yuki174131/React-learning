@@ -2,6 +2,10 @@ const foo = 'dummy';
 const bar = 'key';
 const baz = 1024;
 
+// 文字列として キーを使う場合、識別子の表記ルールにしたがっている限りではクォートが省略できる
+// 文字列によるキー記述 'foo' は同じキーになるからプロパティ値が上書きされる
+// キーの文字列に変数や式を展開した結果の値を用いたい場合は [] で囲む
+// [] で囲めばテンプレートリテラルも使える
 const obj1 = {
   foo: 4,
   'foo': 8,
@@ -10,7 +14,8 @@ const obj1 = {
   [`_${bar}2`]: 256,
   baz: baz / 2,
 };
-console.log(obj1);
+console.log(obj1); // {foo:8,'<fuu>':16,key:128,_key2:256,baz:512}
 
+// baz の名前がプロパティのキー名に、値がそのプロパティ値になる。（プロパティー名のショートハンド）
 const obj2 = { baz };
-console.log(obj2);
+console.log(obj2);  // {baz:1024}

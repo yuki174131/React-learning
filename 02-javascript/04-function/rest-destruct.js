@@ -1,4 +1,8 @@
+// レストパラメータを、それぞれ任意の名前を付けて取得したい場合は次のように書ける（スプレッド構文を併用）
 const sum = (i, ...[j, k, l]) => i + j + k + l;
 
-console.log(sum(1, 2, 3, 4));
-console.log(sum(1, 1, 1, 1, 1, 1));
+console.log(sum(1, 2, 3, 4)); // 10
+console.log(sum(1, 1, 1, 1, 1, 1)); // 4
+
+
+

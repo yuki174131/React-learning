@@ -7,3 +7,8 @@ const counter = () => {
 
   return countUp;
 };
+
+
+// > const increment = counter();
+// > increment(); 1
+// > increment(); 2

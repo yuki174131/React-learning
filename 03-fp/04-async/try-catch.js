@@ -18,3 +18,6 @@ const doIt = () => {
 
 const result = doIt() ?? "";
 console.log(result);
+
+// return が実行されて関数が終わっても finally に書いてることは実行される
+// JavaScript では Error オブジェクトでなくてもかまわず何でも throw で投 げられるの。そして当然のように catch 文が捕捉したもの種類を関知しない
